@@ -1,0 +1,48 @@
+import React,
+{
+    Component
+}
+
+from 'react';
+import PropTypes from 'prop-types';
+import './contact.css';
+class Contact extends Component {
+    render() {
+        const {
+            name,
+            email,
+            phone
+        }
+        =this.props;
+        return ( < div > < h4 style= {
+            nameStyling
+        }
+        > {
+            name
+        }
+        < /h4> < ul > < li > Email: {
+            email
+        }
+        < /li> < li > Phone: {
+            phone
+        }
+        < /li></ul > < /div>)
+    }
+}
+
+Contact.defaultProps= {
+    name: "Admin", email: "admin@gmail.com", phone: "123456789"
+}
+
+;
+Contact.propTypes= {
+    name: PropTypes.string.isRequired, email: PropTypes.string.isRequired, phone: PropTypes.string.isRequired
+}
+
+;
+const nameStyling= {
+    //Styling with the helpof variables
+    color: 'red', text - transform
+}
+
+export default Contact;
